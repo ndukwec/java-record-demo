@@ -2,6 +2,7 @@ package test;
 
 import java.util.Objects;
 import java.util.Scanner;
+import java.util.UUID;
 
 public class Hello {
     public static void main(String[] args) throws Exception {
@@ -13,7 +14,7 @@ public class Hello {
         salary = in.nextLine();
         if (!Objects.equals(name, "") && !Objects.equals(salary, "")) {
                 try {
-                    var me = new Employee(name, salary);
+                    var me = new Employee(UUID.randomUUID().toString(), name, salary);
                     System.out.printf("Employee info: %s%n", me);
                     System.out.printf("Employee annual salary based on the amount entered is %s", calculateAnnualSalary(me.salary()));
                     System.out.println("\n");

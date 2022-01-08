@@ -1,5 +1,7 @@
 package test;
 
 
-public record Employee(String name, String salary) {
+import java.util.UUID;
+
+public record Employee(String id, String name, String salary) {
 }
