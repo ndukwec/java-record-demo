@@ -18,7 +18,7 @@ public class Hello {
                     System.out.printf("Employee annual salary based on the amount entered is %s", calculateAnnualSalary(me.salary()));
                     System.out.println("\n");
                 } catch (Exception e) {
-                    throw new IllegalArgumentException("Error creating an instance of employee");
+                    throw new Exception("An error occurred: " + e.getMessage());
                 }
         } else {
             throw new Exception("You must've entered a wrong value for name or salary of the Employee somewhere " +
